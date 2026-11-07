@@ -1,8 +1,27 @@
+<p align="center">
+  <img src="assets/banner.svg" alt="PPAC: Post-Production App Check" width="100%">
+</p>
+
+<p align="center">
+  <a href="LICENSE"><img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-green.svg"></a>
+  <img alt="Claude Skill" src="https://img.shields.io/badge/Claude-skill-blueviolet.svg">
+  <img alt="PRs welcome" src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
+</p>
+
 # PPAC: Post-Production App Check
 
 > A Claude skill that audits any app you build before you ship it.
 
 AI can generate a working app in minutes. It rarely generates a *safe* one, because nobody asks it to add auth checks, validate input, or write tests, and nobody verifies the output. PPAC turns that verification into a repeatable step: run it after you build, and it checks the code against a tiered checklist, fixes the blockers, and gives you a clear ship / don't-ship verdict.
+
+## Quick start
+
+```bash
+git clone https://github.com/zanni098/ppac-skill.git
+cp -r ppac-skill/ppac ~/.claude/skills/ppac
+```
+
+Then, after you finish building an app, type `/PPAC` in Claude Code. (Other ways to install are below.)
 
 ## Why this exists
 
@@ -94,7 +113,9 @@ After you finish building something, type:
 
 or just ask: "run PPAC on this app", "is this production ready?", "audit this before I ship".
 
-## Example report
+## Example report (illustrative)
+
+This is a made-up app, shown to illustrate the report format.
 
 ```
 PPAC REPORT: invoice-tracker
@@ -123,7 +144,7 @@ TOP 3 NEXT ACTIONS:
 
 ## Contributing
 
-Issues and pull requests are welcome, especially stack-specific verification commands (Django, Rails, Laravel, Go, mobile backends) and new checks that catch real failures.
+Issues and pull requests are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md). Stack-specific verification commands (Django, Rails, Laravel, Go, mobile backends) and new checks that catch real failures are especially useful.
 
 ## License
 
